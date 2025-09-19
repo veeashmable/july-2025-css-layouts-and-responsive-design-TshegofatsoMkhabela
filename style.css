@@ -1,0 +1,113 @@
+/* ===== ROOT ===== */
+:root {
+  --color-text-title: #4b4b4b;
+  --color-text-content: #777;
+  --color-text-content-alt: #afafaf;
+  --color-text-content-hover: #6c6c6c;
+  --color-card-highlight: #e5e5e5;
+  --color-card-border-hover: #cecece;
+}
+
+/* ===== CSS RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== UTILITIES ===== */
+.flex-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 20px;
+}
+.flex-grid {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+body {
+  color: var(--color-text-content);
+  font-size: 17px;
+  font-family: "Nunito", sans-serif;
+  /* ===== TODO: REMOVE MIN ===== */
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10%;
+  align-items: center;
+  justify-content: center;
+  max-width: 932px;
+}
+nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid var(--color-card-border-hover);
+  padding: 0 10%;
+}
+nav img {
+  height: 38px;
+}
+.langauge-selector {
+  display: none;
+  color: var(--color-text-content-alt);
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 0 0 0 auto;
+}
+#down-arrow {
+  height: 12px;
+}
+
+main .title {
+  margin: 50px;
+  padding-top: 70px;
+  color: var(--color-text-title);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+.card {
+  flex: 1;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 6px;
+  padding: 12px 12px 24px;
+  height: auto;
+  min-width: 150px;
+  border: 2px solid var(--color-card-highlight);
+  border-radius: 16px;
+}
+.card h1 {
+  font-size: 17px;
+  color: #4b4b4b;
+}
+.card img {
+  margin-top: 26px;
+  margin-bottom: 15px;
+}
+.card:hover {
+  color: var(--color-text-content-hover);
+  background-color: var(--color-card-highlight);
+  border-color: var(--color-card-border-hover);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media only screen and (min-width: 1090px) {
+  .langauge-selector {
+    display: block;
+  }
+}
